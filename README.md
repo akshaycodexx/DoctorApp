@@ -27,3 +27,60 @@ This web application provides a comprehensive platform for managing doctor appoi
 ---
 
 ## **📁 Folder Structure**
+**2️⃣ Install Dependencies**
+bash
+Copy code
+npm install
+**3️⃣ Configure Environment Variables**
+Create a .env file in the root directory and include:
+
+plaintext
+Copy code
+MONGO_URL=your-mongodb-connection-string
+PORT=8050
+**4️⃣ Start the Server**
+bash
+Copy code
+node server.js
+**5️⃣ Access the Application**
+Visit http://localhost:8050 in your browser.
+
+💡 Key Functionalities
+Booking Appointments
+Visit /bookappointment to schedule an appointment by filling out the required form.
+Adding Doctors
+Admins can add doctors by uploading their profiles, including images and specializations.
+Viewing Doctors
+Visit /doctor to see all registered doctors.
+Visit /doctor/:id to view a specific doctor’s profile, including reviews.
+Reviews
+Patients can leave reviews for doctors or delete their own reviews.
+🎨 Screenshots
+Homepage
+(Insert Screenshot of Homepage)
+
+Doctor Listing
+(Insert Screenshot of Doctor Listing Page)
+
+Doctor Profile
+(Insert Screenshot of Doctor Profile Page)
+
+Admin Add Doctor Page
+(Insert Screenshot of Admin Page)
+
+⚙️ Future Enhancements
+Add authentication for admin and patient roles.
+Implement SMS or email notifications for appointments.
+Improve UI with frameworks like Bootstrap or TailwindCSS.
+Introduce filters for doctors based on specialization and location.
+📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+sql
+Copy code
+
+5. Save the file and add it to your GitHub repository:
+   ```bash
+   git add README.md
+   git commit -m "Added README file"
+   git push origin main

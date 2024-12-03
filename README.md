@@ -76,6 +76,10 @@ Doctor Listing
 Doctor Profile
 ![doc](./screenshots/doc.png)
 
+Appoinment Booking
+
+![Appoinment](./screenshots/Appoinment.png)
+
 Admin Add Doctor Page
 
 ![Admin](./screenshots/Admin.png)

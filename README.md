@@ -27,22 +27,29 @@ This web application provides a comprehensive platform for managing doctor appoi
 ---
 
 ## **📁 Folder Structure**
+
 **2️⃣ Install Dependencies**
 bash
 Copy code
 npm install
+
 **3️⃣ Configure Environment Variables**
+
 Create a .env file in the root directory and include:
 
 plaintext
 Copy code
 MONGO_URL=your-mongodb-connection-string
 PORT=8050
+
 **4️⃣ Start the Server**
+
 bash
 Copy code
 node server.js
+
 **5️⃣ Access the Application**
+
 Visit http://localhost:8050 in your browser.
 
 💡 Key Functionalities
@@ -55,7 +62,9 @@ Visit /doctor to see all registered doctors.
 Visit /doctor/:id to view a specific doctor’s profile, including reviews.
 Reviews
 Patients can leave reviews for doctors or delete their own reviews.
-🎨 Screenshots
+
+## **🎨 Screenshots **
+
 Homepage
 (Insert Screenshot of Homepage)
 
@@ -68,11 +77,13 @@ Doctor Profile
 Admin Add Doctor Page
 (Insert Screenshot of Admin Page)
 
-⚙️ Future Enhancements
+## **⚙️ Future Enhancements **
+
 Add authentication for admin and patient roles.
 Implement SMS or email notifications for appointments.
 Improve UI with frameworks like Bootstrap or TailwindCSS.
 Introduce filters for doctors based on specialization and location.
+
 📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 

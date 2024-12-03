@@ -94,8 +94,6 @@ Introduce filters for doctors based on specialization and location.
 📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-sql
-Copy code
 
 5. Save the file and add it to your GitHub repository:
    ```bash

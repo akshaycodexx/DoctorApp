@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.container{
+    margin: 20px 40px;
+    /* border: 2px solid black; */
+    min-height: 100vh;
+}
+.section1{
+    height: auto;
+    width: 100%;
+    font-size: 16px;
+}
+.section1 h1{
+    height: auto;
+    padding: 10px;
+    font-size: 90px;
+    font-weight: 400;
+    text-align: center;
+}
+.section2{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.section2 .big_div{
+    height: auto;
+    width: 100%;
+    margin: 6.5px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.section2 .big_div .div_img, .imgText{
+    flex-grow: 1;
+    flex-basis: 450px;
+    width: auto;
+}
+.section2 .big_div .div_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section2 .bg_div .div_img img{
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+.section2 .imgText{
+    height: auto;
+    width: auto;
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.section2 .imgText .nav{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.section2 .imgText .nav i{
+    transform: rotate(135deg);
+    color: rgba(0, 0, 0, 0.409);
+}
+.section2 .imgText .body{
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.section2 .imgText .body h2{
+    font-size: 32px;
+    font-weight: 500;
+}
+.section2 .imgText .body p{
+    line-height: 1.7rem;
+}
+.section2 .imgText .body button{
+    margin-top: 30px;
+    height: 40px;
+    width: 160px;
+    border-radius: 25px;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    transition: 1s;
+}
+.section2 .imgText .body button:hover{
+    background-color: white;
+    color: black;
+}
+.section2 .imgText:hover button::after{
+    transform: translateY(-42px);
+    display: block;
+}
+
+
+@media screen and (max-width: 700px) {
+    .section1{
+        height: auto;
+        width: auto;
+        word-wrap: break-word;
+    }
+}
+

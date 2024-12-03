@@ -1,0 +1,67 @@
+<%- layout("layouts/boilarplate") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Doctor Appointment Cards</title>
+    <link rel="stylesheet" href="/css/doctor.css">
+</head>
+<body>
+    <div id="unique-container">
+        <header id="unique-header">
+            <button id="add-doctor-btn"><a href="/admin">+ Add Doctor</a></button>
+            <div id="unique-navigation">
+                <button class="unique-nav-btn">Previous</button>
+                <button class="unique-nav-btn active">Next</button>
+            </div>
+        </header>
+        <section id="unique-doctor-cards">
+            <!-- Hardcoded example cards -->
+            <div class="unique-card">
+                <img src="https://cdn.pixabay.com/photo/2024/09/03/15/21/ai-generated-9019520_640.png" 
+                     alt="Dr. Johnhatan Pautz" 
+                     class="unique-card-image">
+                <h3 class="unique-card-name">Dr. Johnhatan Pautz</h3>
+                <p class="unique-card-specialist">Specialist: Tympanometry</p>
+                <div class="unique-card-ratings">
+                    ★★★★★
+                </div>
+                <button class="unique-appointment-btn">
+                    <a href="/doctorcard">Appointment</a>
+                </button>
+            </div>
+            <div class="unique-card">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/028/287/555/small/an-indian-young-female-doctor-isolated-on-green-ai-generated-photo.jpg" 
+                     alt="Dr. Julian Broker" 
+                     class="unique-card-image">
+                <h3 class="unique-card-name">Dr. Julian Broker</h3>
+                <p class="unique-card-specialist">Specialist: Cardiology</p>
+                <div class="unique-card-ratings">
+                    ★★★★☆
+                </div>
+                <button class="unique-appointment-btn">
+                    <a href="/doctorcard">Appointment</a>
+                </button>
+            </div>
+
+            <!-- Dynamic cards from the database -->
+            <% doctors.forEach(doctor => { %>
+                <div class="unique-card">
+                    <img src="<%= doctor.img %>" 
+                         alt="<%= doctor.name %>" 
+                         class="unique-card-image">
+                    <h3 class="unique-card-name"><%= doctor.name %></h3>
+                    <p class="unique-card-specialist">Specialist: <%= doctor.specialization %></p>
+                    <div class="unique-card-ratings">
+                        ★★★★☆
+                    </div>
+                    <button class="unique-appointment-btn">
+                        <a href="/doctor/<%= doctor._id %>">Appointment</a>
+                    </button>
+                </div>
+            <% }); %>
+        </section>
+    </div>
+</body>
+</html>

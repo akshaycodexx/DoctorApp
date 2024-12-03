@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+/* Doctor Profile Section */
+.unique-doctor-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: none;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Image Styling */
+.unique-profile-image img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.unique-profile-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Profile Info Section */
+.unique-profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: slideInRight 1.2s ease-in-out;
+}
+
+.unique-profile-name {
+  font-size: 24px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.unique-profile-name:hover {
+  color: #0056b3;
+}
+
+.unique-profile-role {
+  font-size: 18px;
+  color: #555;
+}
+
+.unique-profile-actions {
+  margin-top: 15px;
+}
+
+.unique-book-appointment,
+.unique-email-doctor {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.unique-book-appointment:hover,
+.unique-email-doctor:hover {
+  transform: translateY(-2px);
+  background-color: #0056b3;
+}
+
+/* Contact Info Section */
+.unique-contact-info {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid #007bff;
+}
+
+.contact-item {
+  margin-bottom: 15px;
+}
+
+.contact-details {
+  color: #333;
+  font-size: 16px;
+}
+
+/* Review Section */
+.unique-review-section {
+  max-width: 800px;
+  margin: 20px auto;
+  background: none;
+  border-radius: 8px;
+  padding: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.unique-review-heading {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.unique-reviews-list {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.unique-review-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.unique-review-item:hover {
+  background-color: #e9ecef;
+}
+
+.unique-delete-review {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.unique-delete-review:hover {
+  transform: translateY(-2px);
+  background-color: #c82333;
+}
+
+.unique-add-review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.unique-review-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.unique-review-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: none;
+}
+
+.unique-submit-review {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.unique-submit-review:hover {
+  transform: translateY(-2px);
+  background-color: #218838;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}

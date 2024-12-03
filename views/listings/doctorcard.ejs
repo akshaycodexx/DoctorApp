@@ -1,0 +1,96 @@
+<!-- <%- layout("layouts/boilarplate") %> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Profile</title>
+  <link rel="stylesheet" href="/css/doctorcard.css">
+</head>
+<body> 
+    <div class="unique-doctor-profile">
+        <!-- Left Section: Image -->
+        <div class="unique-profile-image">
+          <img src="<%= docinfo.img %>" alt="Dr. <%= docinfo.name %>" />
+        </div>
+      
+        <!-- Right Section: Details -->
+        <div class="unique-profile-info">
+          <h3 class="unique-profile-heading">Profile</h3>
+          <h1 class="unique-profile-name"><%= docinfo.name %></h1>
+          <h4 class="unique-profile-role"><%= docinfo.specialization %></h4>
+          <p class="unique-profile-qualification">
+            Fellowship (<%= docinfo.specialization %>),<br />
+            MS (Medicine), MBBS
+          </p>
+      
+          <div class="unique-profile-details">
+            <p><strong>Experience:</strong> 19 Years+</p>
+            <p><strong>Languages:</strong> English, Spanish</p>
+            <p><strong>Types of:</strong> Surgeon</p>
+          </div>
+      
+          <div class="unique-profile-speciality">
+            <h4>Speciality:</h4>
+            <span class="unique-speciality-tag">Dentistry</span>
+            <span class="unique-speciality-tag">Surgery</span>
+            <span class="unique-speciality-tag">Implantology</span>
+            <span class="unique-speciality-tag">Paediatric</span>
+          </div>
+
+          <!-- Contact Info Section -->
+          <div class="unique-contact-info">
+            <h4>Contact Information:</h4>
+            <div class="contact-item">
+              <strong>Mobile:</strong>
+              <span class="contact-details">+91 <%= docinfo.phone %></span>
+            </div>
+            <div class="contact-item">
+              <strong>Email:</strong>
+              <span class="contact-details"><%= docinfo.email %></span>
+            </div>
+          </div>
+      
+          <!-- Book Appointment and Email Section -->
+          <div class="unique-profile-actions">
+            <a href="#" class="unique-book-appointment">Book Appointment</a>
+            <a href="mailto:dr.jordan@example.com" class="unique-email-doctor">Email Doctor</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Review Section -->
+      <div class="unique-review-section">
+        <h3 class="unique-review-heading">Patient Reviews</h3>
+        
+        <% if (docinfo.reviews && docinfo.reviews.length > 0) { %>
+          <ul class="unique-reviews-list">
+            <% docinfo.reviews.forEach(function(review) { %>
+              <li class="unique-review-item">
+                <%= review.comment %>
+                <form action="/doctor/<%=docinfo._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                  <button class="unique-delete-review" type="submit">Delete</button>
+                </form>
+              </li>
+            <% }); %>
+          </ul>
+        <% } else { %>
+          <p>No reviews yet. Be the first to leave a review!</p>
+        <% } %>
+      
+        <!-- Add Review Form -->
+        <form class="unique-add-review-form" method="POST" action="/doctor/<%= docinfo._id %>/reviews">
+          <label for="review-input" class="unique-review-label">Leave a Review:</label>
+          <textarea
+            id="review-input"
+            class="unique-review-input"
+            placeholder="Write your review here..."
+            name="review[comment]"
+            required
+          ></textarea>
+          <button type="submit" class="unique-submit-review">Submit Review</button>
+        </form>
+      </div>
+</body>
+</html>

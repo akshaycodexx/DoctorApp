@@ -1,0 +1,102 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.appointment-form-container {
+    background: url('https://i.imgur.com/JB4r0eo.jpg') no-repeat center center/cover;
+    width: 100%;
+    padding: 20px;
+}
+
+.appointment-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.appointment-form h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.appointment-form h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+input,
+select {
+    flex: 1 1 calc(50% - 15px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+button {
+    background-color: #f9a825;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffb300;
+}
+
+@media (max-width: 768px) {
+    input, select {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .appointment-form h1 {
+        font-size: 1.5rem;
+    }
+
+    .appointment-form h2 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,47 @@
+<!-- <%- layout("layouts/boilarplate") %> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Appointment Form</title>
+    <link rel="stylesheet" href="/css/specificdoc.css">
+</head>
+<body>
+    <div class="appointment-form-container">
+        <div class="appointment-form">
+            <h1>MEDICAL APPOINTMENT FORM</h1>
+            <h2>MAKE AN APPOINTMENT</h2>
+            <form action="#" method="post">
+                <div class="form-row">
+                    <input type="text" name="patient-name" placeholder="Patient Name" required>
+                    <input type="date" name="date" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="phone-number" placeholder="Phone Number" required>
+                    <select name="department" required>
+                        <option value="" disabled selected>Department</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <select name="gender" required>
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="symptoms" placeholder="Symptoms" required>
+                    <input type="time" name="time" required>
+                </div>
+                <button type="submit">Make an appointment</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

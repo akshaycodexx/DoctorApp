@@ -1,0 +1,138 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Admin Container */
+  .admin-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Header Section */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  header .auth-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+  }
+  
+  header .auth-links a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar Navigation */
+  aside {
+    width: 250px;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  aside nav ul li {
+    border-bottom: 1px solid #555;
+  }
+  
+  aside nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  aside nav ul li a.active, aside nav ul li a:hover {
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  
+  /* Form Section */
+  section {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  section h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-container {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  form button {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    aside {
+      display: none;
+    }
+  
+    header {
+      justify-content: center;
+    }
+  
+    .form-container {
+      padding: 1rem;
+    }
+  }
+  

@@ -1,0 +1,643 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  /* Container Class */
+  .container {
+    max-width: 1200px; /* Constrain the container width */
+    margin: 0 auto;
+    padding: 0 20px; /* Add horizontal padding */
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 20px 0;
+  }
+  
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0; /* Add vertical padding */
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .btn-book-appointment {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-book-appointment:hover {
+    background-color: #0056b3;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-content {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.9rem;
+    }
+  
+    .btn-book-appointment {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  
+    .hero-image img {
+      max-width: 80%; /* Reduce the image size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.8rem;
+    }
+  
+    .btn-book-appointment {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  
+    .hero-image img {
+      max-width: 100%;
+    }
+  }
+  
+
+  /* //section 1 */
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Section Header */
+  .section-header {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  
+  .subtitle {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    color: #666;
+    font-size: 1rem;
+    max-width: 600px;
+  }
+  
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Service Card */
+  .service-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  .service-number {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  
+  /* Hover Effects */
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Dark Card */
+  .dark-card {
+    background-color: #3a4b61;
+    color: #fff;
+  }
+  
+  /* Service Image Card */
+  .service-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .view-services-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-services-btn:hover {
+    background-color: #444;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  
+    .service-card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .service-card p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .subtitle {
+      font-size: 0.8rem;
+    }
+  
+    .description {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* //section 3 */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Clinic Section */
+  .clinic-section {
+    margin-bottom: 50px;
+  }
+  
+  .clinic-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .clinic-subtitle {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #999;
+    letter-spacing: 1px;
+  }
+  
+  .clinic-title {
+    font-size: 2.5rem;
+    color: #222;
+  }
+  
+  .clinic-description {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .clinic-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .clinic-image-card {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+  }
+  
+  .clinic-image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .clinic-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .clinic-btn:hover {
+    background-color: #555;
+  }
+  
+  /* Team Section */
+  .team-section {
+    margin-bottom: 50px;
+  }
+  
+  .team-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .team-subtitle {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #999;
+    letter-spacing: 1px;
+  }
+  
+  .team-title {
+    font-size: 2.5rem;
+    color: #222;
+  }
+  
+  .team-description {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .team-content {
+    display: flex; /* Enables Flexbox layout */
+    flex-wrap: wrap; /* Allows cards to wrap onto new rows if needed */
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Horizontally centers the cards */
+    align-items: center; /* Vertically centers the cards */
+    padding: 20px; /* Adds padding around the container */
+}
+
+.team-card {
+    background-color: #fff; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for aesthetics */
+    padding: 20px; /* Adds inner spacing */
+    text-align: center; /* Centers text within the card */
+    max-width: 300px; /* Limits the card width */
+    flex: 1 1 300px; /* Makes cards flexible with a base width of 300px */
+    transition: transform 0.3s; /* Adds a hover effect (optional) */
+}
+
+.team-card img {
+    width: 100%; /* Makes the image responsive */
+    border-radius: 8px; /* Matches the card’s border radius */
+}
+
+.about-btn {
+    display: inline-block; /* Allows button-like behavior */
+    padding: 10px 20px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Adjust responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .team-card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card {
+        flex: 1 1 100%; /* One card per row */
+    }
+}
+
+  
+  .team-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .intro-card {
+    background-color: #f1f5fb;
+  }
+  
+  .intro-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .intro-card p {
+    font-size: 1rem;
+  }
+  
+  .about-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #3a4b61;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .about-btn:hover {
+    background-color: #555;
+  }
+  
+  .photo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .bio-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .bio-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .clinic-title {
+      font-size: 2rem;
+    }
+  
+    .clinic-description {
+      font-size: 0.9rem;
+    }
+  
+    .team-title {
+      font-size: 2rem;
+    }
+  
+    .team-content {
+      grid-template-columns: 1fr;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+
+  /* f&Q */
+  /* Fullscreen Layout */
+.faq-section-fullscreen {
+    width: 100vw;
+    height: 100vh;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Title and Subtitle */
+.faq-title-main {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.faq-subtitle-unique {
+    font-size: 20px;
+    color: #555555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* FAQ Container */
+.faq-container-unique {
+    width: 60%;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* FAQ Items */
+.faq-item-unique {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 10px;
+}
+
+.faq-question-unique {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.faq-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+    color: #333333;
+}
+
+.faq-answer-unique {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666666;
+}
+
+.faq-answer-text {
+    margin: 0;
+}
+
+/* Open State */
+.faq-answer-unique.open {
+    display: block;
+}
+
+.faq-toggle-btn.open {
+    transform: rotate(90deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-container-unique {
+        width: 90%;
+    }
+
+    .faq-title-main {
+        font-size: 32px;
+    }
+
+    .faq-question-text {
+        font-size: 16px;
+    }
+
+    .faq-answer-text {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+    <body>
+        <%- layout("layouts/boilarplate") %>
+  <div class="container">
+    <div class="content">
+      <h1>Meet the Best <br> Hospital</h1>
+      <p>We know how large objects will act, but things on a small scale.</p>
+      <div class="buttons">
+        <a href="#quote" class="btn-primary">Get Quote Now</a>
+        <a href="#learn" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="appointment-form">
+      <h2>Book Appointment</h2>
+      <form action="/book" method="POST">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" placeholder="Full Name *" required>
+
+        <label for="email">Email address *</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+        <label for="department">Department *</label>
+        <select id="department" name="department" required>
+          <option value="">Please Select</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="orthopedics">Orthopedics</option>
+          <option value="neurology">Neurology</option>
+          <option value="pediatrics">Pediatrics</option>
+        </select>
+
+        <label for="time">Time *</label>
+        <select id="time" name="time" required>
+          <option value="">4:00 Available</option>
+          <option value="10am">10:00 AM</option>
+          <option value="2pm">2:00 PM</option>
+          <option value="4pm">4:00 PM</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Book Appointment</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+

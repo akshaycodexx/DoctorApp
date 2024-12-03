@@ -66,16 +66,19 @@ Patients can leave reviews for doctors or delete their own reviews.
 ## **🎨 Screenshots **
 
 Homepage
-(Insert Screenshot of Homepage)
+
+![Homepage](./screenshots/Homepage.png)
 
 Doctor Listing
-(Insert Screenshot of Doctor Listing Page)
+
+![Listings](./screenshots/Listings.png)
 
 Doctor Profile
-(Insert Screenshot of Doctor Profile Page)
+![doc](./screenshots/doc.png)
 
 Admin Add Doctor Page
-(Insert Screenshot of Admin Page)
+
+![Admin](./screenshots/Admin.png)
 
 ## **⚙️ Future Enhancements **
 

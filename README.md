@@ -82,7 +82,7 @@ Appoinment Booking
 
 Admin Add Doctor Page
 
-![Admin](./screenshots/Admin.png)
+![Admin](./screenshots/admin.png)
 
 ## **⚙️ Future Enhancements **
 

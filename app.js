@@ -47,8 +47,8 @@ app.set("views",path.join(__dirname,"views"))
 app.set("view engine",'ejs');
 
 async function main(){
-    await mongoose.connect(process.env.MONGO_URL)
-    // await mongoose.connect( process.env.MONGO_URL `mongodb://127.0.0.1:27017/Appointment`)
+    // await mongoose.connect(process.env.MONGO_URL)
+    await mongoose.connect(`mongodb://127.0.0.1:27017/Appointment`)
 }
 main().then(()=>{
     console.log("Connected TO Database");
@@ -175,10 +175,10 @@ app.use("/admin",(req,res)=>{
 
 })
 
-const PORT=process.env.PORT || 8050;
+// const PORT=process.env.PORT || 8050;
 
-app.listen(PORT,()=>{
-    console.log("Server Started")
+app.listen(8050,()=>{
+    console.log("Server Started at port : ",8050);
 })
 
 

@@ -233,10 +233,17 @@ app.use("/admin",(req,res)=>{
 
 })
 
+<<<<<<< HEAD
 // const PORT=8050;
 
 app.listen(8085,()=>{
     console.log("Server Started",8085)
+=======
+// const PORT=process.env.PORT || 8050;
+
+app.listen(8050,()=>{
+    console.log("Server Started at port : ",8050);
+>>>>>>> 65b1f18ed08f9e5cdea3ee2cd6c409a171f3bbd8
 })
 
 

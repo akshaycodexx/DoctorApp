@@ -9,7 +9,64 @@ const addDoctor=require("./models/add-doctors.js")
 const multer = require('multer');
 const review= require("./models/reviews.js")
 require("dotenv").config();
+const session=require("express-session");
+const flash=require("connect-flash");
+const passport=require("passport")
+const LocalStrategy=require("passport-local")
+const User=require("./models/user.js")
+const userRoute=require("./routes/user.js")
+
 // const upload = multer({ dest: 'uploads/' }); // Upload folder for images
+
+// express session
+const sessionOptions = {
+    secret: "yourSecretKey", // Replace with a strong secret key
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: false, // Set to true if using HTTPS
+      maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
+    },
+  };
+
+  //session middleware (needed by connect-flash)
+  app.use(session({
+    secret:"yourSecretKey",
+    resave:false,
+    saveUninitialized:true
+  }));
+
+  //initialze flash
+  app.use(flash())
+
+  //middleware for flash message
+  app.use((req,res,next)=>{
+    res.locals.success=req.flash("success");
+    res.locals.error=req.flash("error")
+    next()
+  })
+  
+  //inisilze session before passport
+  app.use(session(sessionOptions));
+  app.use(passport.initialize());
+  app.use(passport.session());
+
+  passport.use(new LocalStrategy(User.authenticate()));
+  passport.serializeUser(User.serializeUser());
+  passport.deserializeUser(User.deserializeUser());
+
+  app.use("/", userRoute);
+
+
+
+
+
+
+
+
+
+
 
 
 const storage = multer.diskStorage({
@@ -40,6 +97,7 @@ const upload = multer({
 
 
 app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static(path.join(__dirname,"/public")))
 app.use(methodOverride(`_method`));
 app.engine('ejs',ejsmate);
@@ -47,8 +105,8 @@ app.set("views",path.join(__dirname,"views"))
 app.set("view engine",'ejs');
 
 async function main(){
-    await mongoose.connect(process.env.MONGO_URL)
-    // await mongoose.connect( process.env.MONGO_URL `mongodb://127.0.0.1:27017/Appointment`)
+    // await mongoose.connect(process.env.MONGO_URL)
+    await mongoose.connect(`mongodb://127.0.0.1:27017/Appointment`)
 }
 main().then(()=>{
     console.log("Connected TO Database");
@@ -58,7 +116,7 @@ main().then(()=>{
 
 
 app.get("/",(req,res)=>{
-  res.render("listings/index.ejs")
+  res.render("listings/index.ejs",{msg:req.flash("msg")})
 })
 
 app.get("/bookappointment",(req,res)=>{
@@ -175,10 +233,10 @@ app.use("/admin",(req,res)=>{
 
 })
 
-const PORT=process.env.PORT || 8050;
+// const PORT=8050;
 
-app.listen(PORT,()=>{
-    console.log("Server Started")
+app.listen(8085,()=>{
+    console.log("Server Started",8085)
 })
 
 

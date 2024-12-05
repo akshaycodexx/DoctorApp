@@ -1,3 +1,11 @@
+<%- layout("layouts/boilarplate") %>
+
+<% if (msg && msg.length > 0) { %>
+  <div class="alert alert-success">
+      <%= msg %>
+  </div>
+<% } %>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,7 +16,6 @@
         
     </head>
     <body>
-        <%- layout("layouts/boilarplate") %>
         <header>
     <section class="hero-section container">
       <div class="hero-content">
